@@ -30,10 +30,7 @@ This section can be further split to variable declaration part and the executabl
 # User defined functions
 This is where you create your own functions inside your program.
 An exampple if you was trying to create a function to find the area which you could define it as:
-'''c
-float FindArea(float, Height, float Length){// rest of the program }
-'''
-
+<pre> ```c float FindArea(float Height, float Length) { // Function logic here return Height * Length * 0.5; // Example: triangle area } ``` </pre>
 
 
 
