@@ -1,0 +1,46 @@
+# CLion
+.idea/
+cmake-build-*/
+*.iml
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+CTestTestfile.cmake
+CPack*.cmake
+install_manifest.txt
+
+# Build output
+/build/
+out/
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.exe
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Windows-specific
+*.vcxproj*
+*.sln
+*.user
+*.opensdf
+*.sdf
+*.db
+
+# Backup files
+*~
+*.swp
+*.bak
+*.tmp
+*.old
