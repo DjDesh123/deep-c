@@ -36,6 +36,15 @@ while(i<5){
 
 This example shows that the loop will keep iterating until the condition is met which seems similar to for loops but you only use for loops if you know for certain how often you want to loop over it 
 
+```c
+            int i = 1
+            while(i<5){
+              printf("%d",i);
+              i++;
+            }
+```
+
+
 ---
 
 ## do while 
