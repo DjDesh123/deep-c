@@ -22,7 +22,7 @@ finally to increment i we use i ++
 ## while loops
 While loops are used differently as they are used for situations where you want to loop an infite amount of time as long as the condition is met.
 this can be showcased by this example 
-<pre  >
+<pre>
             int i = 1
             while(i<5){
               printf("%d",i);
