@@ -9,41 +9,42 @@
 #define EXIT 5
 
 // function prototypes
-int addition(int UserInput1, int UserInput2);
-int subtraction(int UserInput1, int UserInput2);
-int multiply(int UserInput1, int UserInput2);
-int divide(int UserInput1, int UserInput2);
+float addition(int UserInput1, int UserInput2);
+float subtraction(int UserInput1, int UserInput2);
+float multiply(int UserInput1, int UserInput2);
+float divide(int UserInput1, int UserInput2);
 
 // for adding
-int addition(int UserInput1,int UserInput2) {
+float addition(int UserInput1,int UserInput2) {
     return UserInput1 + UserInput2;
 }
 
 // for subtracting
-int subtraction(int UserInput1,int UserInput2) {
+float subtraction(int UserInput1,int UserInput2) {
     return UserInput1 - UserInput2;
 }
 
 // for multiplying
-int multiply(int UserInput1,int UserInput2) {
+float multiply(int UserInput1,int UserInput2) {
     return UserInput1 * UserInput2;
 }
 
 // for dividing
-int divide(int UserInput1,int UserInput2) {
+float divide(int UserInput1,int UserInput2) {
     return UserInput1 /UserInput2;
 }
 
 // main function
 int main() {
 
-    int UserChoice , UserInput1 , UserInput2;
+    int UserChoice;
+    float UserInput1 , UserInput2;
 
     printf("please enter a number");
-    scanf("%d", &UserInput1);
+    scanf("%f", &UserInput1);
 
     printf("please enter a number");
-    scanf("%d", &UserInput2);
+    scanf("%f", &UserInput2);
 
 
     // loops until the user enters a valid choice that's in range of the options
@@ -60,13 +61,13 @@ int main() {
 
          switch (UserChoice) {
              case ADD:
-                 printf("Addition: %d\n", addition(UserInput1, UserInput2));
+                 printf("Addition: %f\n", addition(UserInput1, UserInput2));
              case SUB:
-                 printf("Subtraction: %d\n", subtraction(UserInput1,UserInput2));
+                 printf("Subtraction: %f\n", subtraction(UserInput1,UserInput2));
              case MUL:
-                 printf("Multiplication: %d\n", multiply(UserInput1, UserInput2));
+                 printf("Multiplication: %f\n", multiply(UserInput1, UserInput2));
              case DIV:
-                 printf("Division: %d\n", divide(UserInput1, UserInput2));
+                 printf("Division: %f\n", divide(UserInput1, UserInput2));
              case EXIT:
                  exit(0);
              default:
@@ -74,5 +75,3 @@ int main() {
          }
      } while (UserChoice < ADD || UserChoice > EXIT);
 }
-
-// change these to floats to handle decimal points
