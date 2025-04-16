@@ -18,7 +18,6 @@
 ### Common Mistakes
 
 
-
 ## 2D Arrays
 
 ### Declaration and Initialization
