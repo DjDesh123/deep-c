@@ -9,28 +9,36 @@
 #define EXIT 5
 
 // function prototypes
-float addition(int UserInput1, int UserInput2);
-float subtraction(int UserInput1, int UserInput2);
-float multiply(int UserInput1, int UserInput2);
-float divide(int UserInput1, int UserInput2);
+float addition(float UserInput1, float UserInput2);
+float subtraction(float UserInput1, float UserInput2);
+float multiply(float UserInput1, float UserInput2);
+float divide(float UserInput1, float UserInput2);
+void clearBuffer();
+
+
+void clearBuffer() {
+    // Clear invalid input
+    while (getchar() != '\n');
+}
+
 
 // for adding
-float addition(int UserInput1,int UserInput2) {
+float addition(float UserInput1,float UserInput2) {
     return UserInput1 + UserInput2;
 }
 
 // for subtracting
-float subtraction(int UserInput1,int UserInput2) {
+float subtraction(float UserInput1,float UserInput2) {
     return UserInput1 - UserInput2;
 }
 
 // for multiplying
-float multiply(int UserInput1,int UserInput2) {
+float multiply(float UserInput1,float UserInput2) {
     return UserInput1 * UserInput2;
 }
 
 // for dividing
-float divide(int UserInput1,int UserInput2) {
+float divide(float UserInput1,float UserInput2) {
     return UserInput1 /UserInput2;
 }
 
@@ -39,39 +47,57 @@ int main() {
 
     int UserChoice;
     float UserInput1 , UserInput2;
+    int InputStatus=0;
 
-    printf("please enter a number");
-    scanf("%f", &UserInput1);
+    // To loop until the user enters two valid inputs
+    do {
+        // uses one scanf for tidier code
+        printf("Enter two numbers: ");
 
-    printf("please enter a number");
-    scanf("%f", &UserInput2);
+        InputStatus=scanf("%f %f",&UserInput1,&UserInput2);
+
+        // to check if two floats have been inputted
+        if (InputStatus!= 2) {
+            printf("ERROR: must input a float numbers\n");
+            clearBuffer();
+        }
+
+    }while (InputStatus != 2);
+
 
 
     // loops until the user enters a valid choice that's in range of the options
      do {
-         // Asks the user to enter which maths operation
+
+         printf("---Calculator options---\n");
          printf("1. Add\n");
          printf("2. Subtract\n");
          printf("3. Multiply\n");
          printf("4. Divide\n");
          printf("5. Exit\n");
 
+         // Asks the user to enter which maths operation
          printf("please enter your choice: ");
          scanf("%d", &UserChoice);
 
          switch (UserChoice) {
              case ADD:
                  printf("Addition: %f\n", addition(UserInput1, UserInput2));
+                 break;
              case SUB:
                  printf("Subtraction: %f\n", subtraction(UserInput1,UserInput2));
+                 break;
              case MUL:
                  printf("Multiplication: %f\n", multiply(UserInput1, UserInput2));
+                 break;
              case DIV:
                  printf("Division: %f\n", divide(UserInput1, UserInput2));
+                 break;
              case EXIT:
                  exit(0);
              default:
-                 printf("Wrong choice\n");
+                 printf("ERROR: invalid choice! Must be a number in range (1-5)\n");
          }
      } while (UserChoice < ADD || UserChoice > EXIT);
 }
+
