@@ -27,10 +27,10 @@ Deeper into development, I refactored my program and made the program cleaner by
 ## Test run
 This is what you will see if you ran the program and inputted the two numbers for the program.
 
-![Calculator demo screenshot](assets/options.png)
+![Calculator demo screenshot](options.png)
 
 As you can see if the two numbers are valid  then you will be displayed with the options page which will show you all the types of operations you can do/
 
 In this hypothetical scenario, lets say you wanted to multiple your numbers together then as you can see in the image blow it will send you the response and then end the program
 
-![Calculator demo screenshot](assets/result.png)
+![Calculator demo screenshot](result.png)
