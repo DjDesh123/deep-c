@@ -1,10 +1,18 @@
-# Project evaluations
+# Cli-adventure-game
 
+---
+This project is a simple adventure game that is cli based.After the refacotring of this project i used , pointers ,struts and enums in differenet sections of my code whilst also keeping a clearn control structure logic.
 
-With this project I created a  cli based adventure game.
-this was a little more fun to create as I had to learn a lot more of the control structures in C and then I can make the program more fluid and fun to use.
-I learnt how to use random in c which was a new feature that I never learnt how to use it so it was quite interesting in seeing how it functions and to implement it in my code.
+---
 
+## Tools I used
 
-## Refactoring of the code ideas
-Next time I want to write a more in depth layer of to the cli game by adding maybe some delays and more options and mechanics to look at whislt playing in the free time i get to refactor.
+- structs to hold the character's attributes
+- if statement to move the scenario forward depending on what happened in the code
+- enums to add readability to my code 
+- pointers to effect the attributes directly and be more memory efficient.
+- for loop to interate over a certain period of time 
+- while loop to handle all scenarios and keep looping till the game ends
+
+---
+
