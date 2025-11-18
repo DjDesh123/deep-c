@@ -17,6 +17,7 @@ int *p = &x;  // 'p' holds the address of 'x'
 int *ptr;     // Declares a pointer to int
 ptr = &x;     // Assigns address of x to ptr
 ```
+
 What the example above is doing is  that int *ptr is telling the compiler that ptf is a variable that is stored with the address pointer to an integer
 then ptr is uses &x to get the memory address of x.
 Why this matters is to understnad the difference between *(dereferencing ) and & (address of ) is key to understanding how C handles memory.
